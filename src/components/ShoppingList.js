@@ -12,9 +12,8 @@ function ShoppingList({ items, onItemFormSubmit }) {
   }
 
   const itemsToDisplay = items
-    // category
     .filter((item) => selectedCategory === "All" || item.category === selectedCategory)
-    // search term
+
     .filter((item) => item.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
